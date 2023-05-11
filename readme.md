@@ -105,6 +105,7 @@ In order to test this application it is required:
 * Python 3.10.11
 * Selenium 4.9
 * Pytest 7.3.1
+* Chrome Latest Version
 
 
 ### Installation
