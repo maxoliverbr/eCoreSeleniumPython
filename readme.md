@@ -27,7 +27,7 @@
 <h3 align="center">eCore Selenium Python Code Challenge</h3>
 
   <p align="center">
-    project_description
+    POM, Python and Selenium automation test. 
     <br />
     <a href="https://github.com/maxoliverbr/eCoreSeleniumPython"><strong>Explore the docs »</strong></a>
     <br />
