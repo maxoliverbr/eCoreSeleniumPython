@@ -92,7 +92,7 @@ Code challenge by Daniel Guimarães for eCore Senior QA Automation
 ## Getting Started
 
 This app was developed using Page Object Model pattern (POM) to automate access via login of webapp 
-and validate functionality and information presented to the user.
+and validate functionality and information presented to the user using Python, Selenium and Chrome.
 
 There are 3 pages in this app:
 * Login
@@ -104,6 +104,8 @@ There are 3 pages in this app:
 In order to test this application it is required:
 * Python 3.10.11
 * Selenium 4.9
+* Pytest 7.3.1
+
 
 ### Installation
 
@@ -113,7 +115,7 @@ In order to test this application it is required:
    ```
 2. Install packages
    ```sh
-   pip install
+   pip install -r requirements.txt
    ```
 3. Run tests with pytest
    ```sh
@@ -161,22 +163,6 @@ Project Link: [https://github.com/maxoliverbr/eCoreSeleniumPython](https://githu
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/maxoliver
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
 [Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://python.org
 [Selenium]: https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white
