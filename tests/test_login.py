@@ -11,6 +11,7 @@ class TestLogin(BaseTest):
     login method with username and password
     return LoginPage object
     """
+
     def login(self, username, password):
         login_page = LoginPage(self.driver)
         login_page.set_username(username)
@@ -23,6 +24,7 @@ class TestLogin(BaseTest):
     Goal
     Validate if the user can authenticate in the application with the credentials provided.
     """
+
     def test_tc001(self):
         login_page = self.login(TestData.username, TestData.password)
         title = login_page.get_title()
@@ -37,8 +39,21 @@ class TestLogin(BaseTest):
     
     Test case marked to fail.
     """
+
     @pytest.mark.xfail()
-    def test_tc002(self):
+    @pytest.mark.parametrize(('username', 'password'), (("Demouser", "abc123"),
+                                                    ("demouser_", "xyz"),
+                                                    ("demouser", "nananana"),
+                                                    ("demouser", "abc123")))
+    def test_tc002_parametrized(self, username, password):
+        # Using fixture with parameters slower due to creating instances for each iteration
+        login_page = self.login(username, password)
+        alert_message = login_page.get_alert()
+        assert alert_message == TestData.alert_message
+
+    @pytest.mark.xfail()
+    def test_tc002_non_parametrized(self):
+        # Using TestData class faster
         for username, password in TestData.username_password_list:
             login_page = self.login(username, password)
             alert_message = login_page.get_alert()
