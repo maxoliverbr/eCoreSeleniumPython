@@ -1,25 +1,27 @@
+""" Import test lib """
 import pytest
-from selenium.common import NoSuchElementException, InvalidSelectorException
-from selenium.webdriver.common.by import By
-
+from utilities.test_data import TestDataInvoice
 from pages.login_page import LoginPage
 from pages.account_page import AccountPage
 from pages.invoice_page import InvoicePage
 from tests.base_test import BaseTest
-from utilities.test_data import TestDataInvoice
 
 
-# class of test invoice with test data
 class TestInvoice(BaseTest):
     """
+    Class of test invoice with test data
+
     TC003 - Validate invoice details
 
     Objective:
     Validate the invoice information is presented.
     """
+
     # @pytest.mark.xfail()
     def test_tc003(self):
-        # login page object
+        """
+        login page object
+        """
         login_page = LoginPage(self.driver)
 
         # account page object
@@ -59,5 +61,3 @@ class TestInvoice(BaseTest):
             assert invoice_page.get_tax_vat() == TestDataInvoice.tax_vat
             # Known issue - expected USD 209.00 - actual USD 209
             assert invoice_page.get_total_amount() == TestDataInvoice.total_amount
-
-
