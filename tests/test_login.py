@@ -6,7 +6,7 @@ from pages.login_page import LoginPage
 from tests.base_test import BaseTest
 
 
-class TestLogin(BaseTest):
+class TestLogin(BaseTest): # pylint: disable=too-few-public-methods
     """
     Class of test login with test data
     login method with username and password

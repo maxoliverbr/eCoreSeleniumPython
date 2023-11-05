@@ -5,8 +5,7 @@ from pages.base_page import BasePage
 from pages.account_page import AccountPage
 
 
-
-class LoginPage(BasePage):
+class LoginPage(BasePage):  # pylint: disable=too-few-public-methods
     """
     Login base page with related methods:
     set_username
@@ -21,7 +20,7 @@ class LoginPage(BasePage):
     login_button = (By.ID, "btnLogin")
     alert_message = (By.XPATH, "//div[@role='alert']")
 
-    def __init__(self, driver):
+    def __init__(self, driver):  # pylint: disable=useless-parent-delegation
         super().__init__(driver)
 
     def set_username(self, username):

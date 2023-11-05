@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
 
-class AccountPage(BasePage):
+class AccountPage(BasePage):  # pylint: disable=too-few-public-methods
     """
     Account page class extends BasePage with XPATH selector
     """

@@ -7,7 +7,7 @@ from pages.invoice_page import InvoicePage
 from tests.base_test import BaseTest
 
 
-class TestInvoice(BaseTest):
+class TestInvoice(BaseTest): # pylint: disable=too-few-public-methods
     """
     Class of test invoice with test data
 

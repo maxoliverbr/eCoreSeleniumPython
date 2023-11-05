@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
 
-class InvoicePage(BasePage):
+class InvoicePage(BasePage):  # pylint: disable=too-few-public-methods
     """
     Locators for invoice elements
     """
@@ -26,7 +26,7 @@ class InvoicePage(BasePage):
     due_date = (By.XPATH, "/html/body/section/div/ul/li[2]")
     customer_details = (By.XPATH, "/html/body/section/div/div")
 
-    def __init__(self, driver):
+    def __init__(self, driver):  # pylint: disable=useless-parent-delegation
         super().__init__(driver)
 
     def get_hotel_name(self):
