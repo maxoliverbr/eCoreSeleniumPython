@@ -1,14 +1,12 @@
-"""
-Provided test data for test cases.
-"""
-
-"""
-Test data for TC001 and TC002 - login with valid and invalid credentials
-"""
+""" Provided test data for test cases. """
 
 
-class TestData:
-    # valid username and passwords
+class TestData:  # pylint: disable=too-few-public-methods
+    """
+    Test data for TC001 and TC002 - login with valid and invalid credentials
+    valid username and passwords
+    """
+
     url = "https://automation-sandbox-python-mpywqjbdza-uc.a.run.app/"
     username = "demouser"
     password = "abc123"
@@ -27,12 +25,11 @@ class TestData:
     home_page_title = "Automation Example"
 
 
-"""
-Test data for TC003 - Invoice
-"""
+class TestDataInvoice:  # pylint: disable=too-few-public-methods
+    """
+    Test data for TC003 - Invoice
+    """
 
-
-class TestDataInvoice:
     username = TestData.username
     password = TestData.password
     hotel_name = "Rendezvous Hotel"
