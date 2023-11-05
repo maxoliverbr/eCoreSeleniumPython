@@ -1,17 +1,12 @@
+""" Module provide testing lib """
 import pytest
 from selenium import webdriver
-#from selenium.webdriver.remote.remote_connection import RemoteConnection
 from utilities.test_data import TestData
-
-
-"""
-Fixture to open the browser instance for each test case.
-"""
 
 
 @pytest.fixture(params=["chrome", "firefox"])
 def initialize_driver(request):
-
+    """ Fixture to open the browser instance for each test case."""
     if request.param == "chrome":
         driver = webdriver.Chrome()
     elif request.param == "firefox":
